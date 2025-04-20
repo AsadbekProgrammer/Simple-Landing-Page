@@ -1,0 +1,141 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+}
+
+header, main {
+    padding:2.625em;
+}
+
+header {
+    background-image:url('bg.jpg');
+    background-size:cover;
+    position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(82, 0, 255, 0.85); /* kuchli binafsha rang */
+  z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index:2;
+}
+
+h1 {
+     font-family: 'Bebas Neue';
+     color:#fff;
+     font-size:13vw;
+     text-align:center;
+}
+
+h3 {
+    color:#fff;
+    text-align: center;
+    font-weight: 500;
+    font-size:5vw;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:1em;
+}
+
+label, submit-btn {
+    font-size:1.125rem;
+}
+
+input {
+    width:100%;
+    height:4em;
+    padding:.5em;
+    background-color:#EDEDED;
+    border:1px solid #C7C7C7;
+}
+
+.submit-btn {
+    margin-top: 1.75em;
+    height:3.5em;
+    color:#fff;
+    background-color: #5200FF;
+    font-weight:500;
+    cursor:pointer;
+}
+
+
+@media (min-width:550px) {
+    .form-content {
+        flex-direction: row;
+        gap:2.5em;
+    }
+    
+    h1 {
+        font-size:9vw;
+    }
+    
+    h3 {
+        font-size:3vw;
+    }
+    
+    .form-group {
+        width:100%;
+    }
+    
+    .submit-btn {
+        width:25%;
+    }
+}
+
+@media (min-width: 990px) {
+    body {
+        flex-direction: row;
+    }
+    
+    header, main {
+        width:50%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header {
+        min-height:100vh;
+    }
+    
+    h1 {
+        font-size: 6vw;
+    }
+    
+    h3 {
+        font-size:2vw;
+    }
+    
+    .form-content {
+        min-width:450px;
+        flex-direction: column;
+    }
+}

@@ -65,7 +65,7 @@ h3 {
     gap:1em;
 }
 
-label, submit-btn {
+label, .submit-btn {
     font-size:1.125rem;
 }
 
